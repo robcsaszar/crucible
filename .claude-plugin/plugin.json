@@ -1,0 +1,19 @@
+{
+  "name": "robcsaszar-crucible",
+  "version": "0.5.0",
+  "description": "Targeted codebase audit skill: parallel domain recon agents, adversarial false-positive elimination, machine-validated findings JSON, and a SPEC handoff for implementation.",
+  "author": {
+    "name": "Rob Csaszar",
+    "url": "https://nhg.design"
+  },
+  "repository": "https://github.com/robcsaszar/crucible",
+  "license": "MIT",
+  "keywords": [
+    "code-audit",
+    "security-findings",
+    "multi-agent",
+    "claude-code",
+    "codebase-review",
+    "adversarial-review"
+  ]
+}

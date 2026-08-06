@@ -1,0 +1,15 @@
+{
+  "name": "crucible",
+  "owner": {
+    "name": "Rob Csaszar",
+    "url": "https://nhg.design"
+  },
+  "plugins": [
+    {
+      "name": "robcsaszar-crucible",
+      "source": "./",
+      "description": "Targeted codebase audit skill: parallel domain recon agents, adversarial false-positive elimination, machine-validated findings JSON, and a SPEC handoff for implementation.",
+      "version": "0.5.0"
+    }
+  ]
+}
