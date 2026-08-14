@@ -1,6 +1,6 @@
 ---
 name: crucible
-description: "Targeted codebase audit — parallel domain recon agents, adversarial false-positive elimination, machine-validated findings JSON, SPEC handoff to implement. Use when auditing a user flow, investigating cross-domain issues, or running a structured fix cycle. Trigger phrases — audit the X flow, investigate issues in Y, run recon on X and Y, full audit of Z domain."
+description: "Targeted multi-domain codebase audit. Use when auditing a user flow end to end, investigating issues that span several domains (auth, data, API, UI), or running a structured find-then-fix cycle over a named area. Not for reviewing a single file or diff — that's code-review — or for fixing a bug whose cause is already known."
 disable-model-invocation: true
 ---
 
@@ -56,6 +56,8 @@ MANDATORY READ [`references/adversarial-phase.md`](references/adversarial-phase.
 Launch one **general** agent per finding (batch findings from the same domain). Each agent gets the finding JSON and `codebase-map.md` — NOT the recon agent's reasoning. Independence boundary is the quality gate.
 
 Agents return `CONFIRMED` / `REJECTED` / `DOWNGRADED` with code evidence. Append each verdict to the corresponding entry in `findings.json`. Run `node scripts/validate-findings.cjs findings.json` — fix any schema errors before Phase 3.
+
+**When the validator itself can't run** — `node` not on PATH, the script or its schema missing, a usage error, or any failure before validation begins (`Failed to load schema`, `Failed to parse JSON`) — this is not a pass. Note `⚠ findings unvalidated — validator unavailable: <reason>` in the findings output and at the top of the SPEC handoff, then continue. A schema *rejection* is the opposite case and always blocks: fix the findings, re-run, do not proceed on a rejection. Both currently exit `1`, so read the error text, not the exit code.
 
 Completion criterion: every finding has an `adversarial_verdict` field. Schema validation passes. Do NOT reload `references/recon-phase.md` from this point forward.
 
