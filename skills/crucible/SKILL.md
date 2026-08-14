@@ -1,6 +1,6 @@
 ---
 name: crucible
-description: "Targeted multi-domain codebase audit. Use when auditing a user flow end to end, investigating issues that span several domains (auth, data, API, UI), or running a structured find-then-fix cycle over a named area. Not for reviewing a single file or diff — that's code-review — or for fixing a bug whose cause is already known."
+description: "Targeted multi-domain codebase audit. Use when auditing a user flow end to end, investigating issues that span several domains (auth, data, API, UI), or running a structured find-then-fix cycle over a named area. Produces a validated findings set and a SPEC handoff for implementation. Not for reviewing a single file or diff — that's code-review — or for fixing a bug whose cause is already known."
 disable-model-invocation: true
 ---
 
