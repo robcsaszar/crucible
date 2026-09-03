@@ -15,4 +15,5 @@ All notable changes to this project are documented here. Format follows [Keep a 
 
 - Initial release: crucible skill.
 
+[0.6.0]: https://github.com/robcsaszar/crucible/releases/tag/v0.6.0
 [0.5.0]: https://github.com/robcsaszar/crucible/releases/tag/v0.5.0
