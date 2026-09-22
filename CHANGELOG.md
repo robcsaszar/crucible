@@ -2,6 +2,11 @@
 
 All notable changes to this project are documented here. Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versioning follows [SemVer](https://semver.org/).
 
+## [0.6.1] - 2026-09-22
+
+### Fixed
+
+- `references/recon-phase.md`: the recon prompt pointed at `src/components/` for UI components. Corrected to `src/lib/components/`, matching the SvelteKit convention the rest of the prompt already assumes.
 ## [0.6.0] - 2026-08-14
 
 ### Changed
@@ -15,5 +20,6 @@ All notable changes to this project are documented here. Format follows [Keep a 
 
 - Initial release: crucible skill.
 
+[0.6.1]: https://github.com/robcsaszar/crucible/releases/tag/v0.6.1
 [0.6.0]: https://github.com/robcsaszar/crucible/releases/tag/v0.6.0
 [0.5.0]: https://github.com/robcsaszar/crucible/releases/tag/v0.5.0

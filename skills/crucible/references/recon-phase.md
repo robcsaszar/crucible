@@ -19,7 +19,7 @@ Prior confirmed findings to skip (already known):
 [SKIP_IDS — comma-separated IDs, or "none"]
 
 Your task: exhaustively audit the [DOMAIN] flow across every layer —
-UI components (src/components/, src/routes/), business logic (src/lib/, src/lib/svelte/),
+UI components (src/lib/components/, src/routes/), business logic (src/lib/, src/lib/svelte/),
 API endpoints (src/routes/api/), SSE/realtime streams and reconnection logic, tests (tests/).
 
 Audit angles — apply all of them:
